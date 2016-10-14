@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package project;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+import static javax.swing.text.html.HTML.Tag.BR;
 
 /**
  *
@@ -18,6 +22,21 @@ public class Project {
         // TODO code application logic here
         
         System.out.println("Hello world.");
+        
+        try{
+        FileReader F = new FileReader(args[0]);
+        BufferedReader BR = new BufferedReader(F);} catch(IOException e){ 
+          } 
+        
+        String line = "";
+        String lines = "";
+        while ((line = BR.toString()) != null)
+            lines += line;
+        String s = null;
+        
+
+            System.out.printf("  -->%s%n", s);
+
     }
     
 }
